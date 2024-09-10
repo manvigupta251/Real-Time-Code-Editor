@@ -1,0 +1,281 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Modern, clean font */
+}
+/* Flexbox Centering */
+.homePageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f9eff, #0bbdbd); /* Gradient matching logo */
+}
+
+
+/* Form Styling */
+.formWrapper {
+  background-color: #243447; /* Darker background for form, similar to the logo’s outline */
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for contrast */
+  text-align: center; /* Center text within the form */
+}
+
+
+
+/* Footer Styling */
+footer {
+  position: fixed;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+  color: #00ffff; /* Bright color from the logo */
+  
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #0f9eff; /* Hover effect with gradient color */
+}
+
+/* Input Group Styling */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Consistent spacing between inputs */
+}
+
+/* Label Styling */
+.mainLabel {
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff; /* Ensure label text stands out */
+}
+
+/* Logo Styling */
+.homePageLogo {
+  height: 80px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Subtle shadow for logo */
+}
+
+/* Input Box Styling */
+.inputBox {
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background-color: #eeeeee;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.inputBox:focus {
+  background-color: #dddddd; /* Highlight input on focus */
+  outline: none;
+}
+
+/* Button Styling */
+.btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: inline-block;
+}
+
+/* Join and Leave Button Styling */
+.joinBtn,
+.leaveBtn {
+  background-color: #00bcd4; /* Light blue from the logo */
+  color: #ffffff;
+  width: 100%;
+  /* max-width: 150px; */
+  text-align: center;
+  margin-left: auto;
+}
+
+.joinBtn:hover,
+.leaveBtn:hover {
+  background-color: #00838f; /* Darker shade on hover */
+}
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn {
+  color: #4aed88;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: inline-block; /* Ensures the white-space applies correctly */
+}
+
+.createNewBtn:hover,
+footer a:hover {
+  color: #368654;
+  border-color: #368654;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .formWrapper {
+      padding: 16px;
+  }
+
+  .homePageLogo {
+      height: 60px;
+  }
+
+  .inputBox, .btn {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .joinBtn, .leaveBtn {
+      max-width: 120px;
+  }
+}
+
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  height: 100vh; 
+}
+
+.aside {
+  height: 100%;
+  background: #1c1e29;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+}
+.asideInner {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 30px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.userName {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.logo {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+}
+
+.logoImage {
+  height: 90px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Leave button */
+.leaveBtn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Aside hover effect */
+.aside:hover {
+  background: #1a1b25;
+}
+
+/* Client hover effect */
+.client:hover {
+  transform: translateY(-10px);
+  color: #00bfa6;
+}
+
+.logoImage:hover {
+  
+  transform: scale(1.1);
+}
+
+.leaveBtn:hover {
+  background-color: #e64545;
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mainWrap {
+    grid-template-columns: 1fr;
+  }
+
+  .clientsList {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .aside {
+    padding: 15px;
+  }
+
+  .leaveBtn {
+    padding: 12px;
+  }
+}
+
+.CodeMirror {
+    min-height: calc(100vh - 20px);
+    font-size: 20px;
+    line-height: 1.6;
+    padding-top: 20px;
+}
